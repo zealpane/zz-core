@@ -1,4 +1,4 @@
-package com.gdatacloud.zz;
+package com.gdatacloud.zz.classLoader;
 
 import aj.org.objectweb.asm.ClassWriter;
 import aj.org.objectweb.asm.MethodVisitor;
