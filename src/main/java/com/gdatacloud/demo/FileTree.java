@@ -45,6 +45,6 @@ public class FileTree {
 	}
 	
 	public static void main(String[] args) {
-		new FileTree().echoTree(new File("D:\\Core\\source\\gupaoedu-mvcframework\\src"), "");
+		new FileTree().echoTree(new File("D:\\pj\\card\\water_card_client\\Meal card management system"), "");
 	}
 }
