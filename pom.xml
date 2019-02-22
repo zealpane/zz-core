@@ -5,11 +5,11 @@
 	<groupId>com.gdatacloud</groupId>
 	<artifactId>zz-core</artifactId>
 	<packaging>war</packaging>
-	<parent>
+<!-- 	<parent>
 		<groupId>com.gdatacloud</groupId>
 		<artifactId>p</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-	</parent>
+	</parent> -->
 	<version>0.0.1-SNAPSHOT</version>
 	<name>zz-core Maven Webapp</name>
 	<url>http://maven.apache.org</url>
@@ -20,10 +20,10 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId>
@@ -33,6 +33,13 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- 增强插件 -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.4</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.curator/curator-framework -->
