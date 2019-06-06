@@ -32,7 +32,8 @@ public class JdbcUtil {
 	}
 	
 	public static Connection getConnection() throws SQLException {
-		return DriverManager.getConnection("", null, null);
+		return DriverManager.getConnection("jdbc:mysql://218.28.238.170:3306/lock_db?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull"
+				, "root", "kzxkdzt007!");
 	}
 	
 	/**

@@ -4,7 +4,7 @@ import java.io.File;
 
 import com.gdatacloud.ZLog;
 
-public class FileTree {
+public class MdTree {
 
 	/**
 	 * 根据传入的目录，遍历输出文件及目录树
@@ -14,8 +14,8 @@ public class FileTree {
 	public void echoTree(File parentFile, String prefix, int level) {
 		ZLog.println(prefix, parentFile.getName());
 		// 第一个缩进符号替换成竖线，第二个替换成空格
-		prefix = prefix.replace("├─", "│");
-		prefix = prefix.replace("└─", " ");
+		prefix = prefix.replace("├", "│");
+		prefix = prefix.replace("└", " ");
 		
 		// 需要传入一个给定的目录；File类是java.io包下的代表与平台无关的文件和目录
 		if (!parentFile.exists() || parentFile.isFile()) {
@@ -30,9 +30,9 @@ public class FileTree {
 			// 根据level值确定要输入几段缩进
 			// 如果是最后一条，那么是└，否则就是├
 			if (i == childFileList.length -1) {
-				echoTree(f, prefix + " └─", level + 1);
+				echoTree(f, prefix + "└", level + 1);
 			} else {				
-				echoTree(f, prefix + " ├─", level + 1);
+				echoTree(f, prefix + "├", level + 1);
 			}
 		}
 	}
@@ -45,6 +45,6 @@ public class FileTree {
 	}
 	
 	public static void main(String[] args) {
-		new FileTree().echoTree(new File("D:\\docs\\S\\课件"), "");
+		new MdTree().echoTree(new File("E:\\code\\lock-api\\src\\main\\java"), "");
 	}
 }
